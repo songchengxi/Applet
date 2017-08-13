@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/traffic/list",
+    "pages/switchcity/switchcity"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#dddddd"
+  }
+}

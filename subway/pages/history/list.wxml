@@ -1,0 +1,22 @@
+<!--水平滚动-->
+<scroll-view scroll-x="true" style="display: flex" >
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">朝代</view>
+    <view class="th time">起止时间</view>
+    <view class="th">建立者</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}" data-id="{{item.id}}" catchtap="bindItemTap">
+      <view class="td">{{item.dynasty}}</view>
+      <view class="td time">{{item.time}}</view>
+      <view class="td">{{item.founder}}</view>
+    </view>
+    <view class="tr" wx:else data-id="{{item.id}}" catchtap="bindItemTap">
+      <view class="td">{{item.dynasty}}</view>
+      <view class="td time">{{item.time}}</view>
+      <view class="td">{{item.founder}}</view>
+    </view>
+  </block>
+</view>
+</scroll-view>

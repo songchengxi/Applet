@@ -1,0 +1,42 @@
+ .table {
+  width: 100%;
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:34%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 34%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.contact{
+  background-color: #828a92;
+  border-radius: 30px;
+  height: 60px;
+  width: 60px;
+  opacity:0.5;
+  text-align:center;
+  font-size: .7rem; 
+  position:fixed;
+  bottom:10px;
+  right:10px;
+}
