@@ -1,6 +1,6 @@
 .container {
   padding: 0;
-} 
+}
 .scroll-view-item {
   padding: 1rem 5px;
   padding-bottom: 3px;
@@ -18,9 +18,9 @@
   top: 0;
 }
 .tips {
-  font-size: .85rem;
+  font-size: 0.85rem;
   bottom: 0;
-  color: #828a92;
+  color: #b2b2b2;
 }
 .item-info {
   float: left;
@@ -28,24 +28,26 @@
 .category {
   float: right;
 }
-.bottom{
-  font-size: .85rem;
-  color: #828a92;
-  padding:1rem 10px;
+.bottom {
+  font-size: 0.85rem;
+  color: #b2b2b2;
+  padding: 1rem 10px;
 }
+
 /* 客服 */
-.contact{
-  background-color: #828a92;
+.contact {
+  background-color: #b2b2b2;
   border-radius: 30px;
   height: 60px;
   width: 60px;
-  opacity:0.5;
-  text-align:center;
-  font-size: .7rem; 
-  position:fixed;
-  bottom:10px;
-  right:10px;
+  opacity: 0.5;
+  text-align: center;
+  font-size: 0.7rem;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
+
 /*  加载更多   */
 .weui-loading {
   margin: 0 5px;
@@ -68,4 +70,81 @@
 .weui-loadmore__tips {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* 定位 */
+.home_address {
+  background-color: #4fc3f7;
+  text-align: center;
+  padding: 20rpx;
+}
+.home_address view {
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  white-space: nowrap;
+}
+.home_address view text {
+  color: white;
+  font-size: 0.85rem;
+  padding-right: 40rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  white-space: nowrap;
+  border-radius: 30rpx;
+  background-color: #03a9f4;
+}
+.home_address image {
+  width: 14rpx;
+  height: 9rpx;
+  padding: 8rpx;
+  margin-left: -40rpx;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/* 分类选择 */
+.scroll-view_H {
+  width: 100%;
+  white-space: nowrap;
+  border-bottom: 1px solid #e6e8eb;
+}
+.scroll-view-item_H {
+  text-align: center;
+  margin-top: 25rpx;
+  margin-bottom: 35rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+.section_sel_text {
+  color: white;
+  font-size: 0.75rem;
+  padding-right: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 30rpx;
+  white-space: nowrap;
+  border-radius: 12rpx;
+  background-color: #03a9f4;
+  border: 0.5rpx solid 03a9f4;
+}
+.section_text {
+  color: black;
+  font-size: 0.75rem;
+  padding-right: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 30rpx;
+  white-space: nowrap;
+  border-radius: 12rpx;
+  background-color: white;
+  border: 0.5rpx solid black;
 }

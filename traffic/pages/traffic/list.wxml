@@ -1,21 +1,39 @@
-<modal class="modal" hidden="{{modalFlag}}" no-cancel bindconfirm="confirm" confirmText="我知道了">  
+<!-- <modal class="modal" hidden="{{modalFlag}}" no-cancel bindconfirm="confirm" confirmText="我知道了">  
     <view class="dew">  
-      <!-- <image src="../../images/ts.png" alt="" class="age"></image>   -->
+       <image src="../../images/ts.png" alt="" class="age"></image>   
       <view class="vedw">目前提供山西省内信息，其他省市会陆续支持</view>  
-      <!-- <view class="po_w">
+       <view class="po_w">
         <block wx:for="{{agentList}}" wx:for-item="a" wx:key="a.name">  
         <view class="ved">  
           <view class="titd">{{a.name}}</view>  
           <view class="addd">{{a.cityName}}{{a.districtName}}{{a.address}}</view>  
         </view>  
         </block>
-      </view> -->
+      </view> 
 </view>  
-</modal>
+</modal> -->
+
+<view class="home_address" data-id="{{cityId}}" catchtap="selCity">
+  <view>  
+    <text>当前省市：{{cityName}}</text>  
+    <image src="{{imgUrls_address}}" />  
+  </view>  
+</view>
+
+<!-- <view class="section section_gap">
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view id="0" class="scroll-view-item_H"><text class="section_sel_text">全部</text></view>
+    <view id="1" class="scroll-view-item_H"><text class="section_text">事故</text></view>
+    <view id="2" class="scroll-view-item_H"><text class="section_text">拥堵</text></view>
+    <view id="3" class="scroll-view-item_H"><text class="section_text">管制、施工</text></view>
+    <view id="4" class="scroll-view-item_H"><text class="section_text">封闭</text></view>
+    <view id="5" class="scroll-view-item_H"><text class="section_text">缓慢</text></view>
+  </scroll-view>
+</view> -->
 
 <view class="container">  
   <view scroll-y="true" bindscroll="scroll" 
-    class="scroll-wrapper" style="height:{{windowHeight}}px;">
+    style="height:{{windowHeight}}px;">
     <view class="scroll-view-item" wx:for="{{content}}" wx:key="{{item.id}}" data-id="{{item.id}}" catchtap="bindItemTap">  
       <view class="detail">  
         <text class="item-name">{{item.info}}</text>  

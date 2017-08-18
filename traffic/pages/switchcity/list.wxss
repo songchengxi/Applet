@@ -52,3 +52,35 @@
     align-items: center;
     border-bottom: 1px solid #f8f8f8
 }
+.scroll-view-item_H {
+  text-align: center;
+  margin-top: 25rpx;
+  margin-bottom: 35rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+.section_sel_text {
+  color: #00a0ea;
+  font-size: 0.85rem;
+  padding-right: 35rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 35rpx;
+  white-space: nowrap;
+  border-radius: 45rpx;
+  background-color: #E2F4FE;
+  border: 0.2rpx solid 03a9f4;
+}
+.section_text {
+  color: #7E7E7E;
+  font-size: 0.85rem;
+  padding-right: 35rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 35rpx;
+  white-space: nowrap;
+  border-radius: 45rpx;
+  background-color: white;
+  border: 0.2rpx solid #DBDBDB;
+}

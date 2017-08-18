@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="../../images/me.jpg" background-size="cover"></image>
+    <text class="userinfo-nickname">高速路况信息</text>
+  </view>
+</view>
+<view>
+  <view class="item_letter">作者作品</view>
+  <view bindtap="jump" class="jump_app">
+    <image class="appinfo-avatar" src="../../images/history.jpg" background-size="cover"></image>
+  </view>
+</view>

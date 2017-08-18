@@ -9,10 +9,12 @@ Page({
     startPageY: 0,
     cityList: [],
     isShowLetter: false,
+    activeId: 0,
     scrollTop: 0,
     city: ""
   },
   onLoad: function (options) {
+    var cityId = options.activeId;
     // 生命周期函数--监听页面加载
     var searchLetter = city.searchLetter;
     var cityList = city.cityList();
@@ -35,7 +37,8 @@ Page({
       winHeight: winHeight,
       itemH: itemH,
       searchLetter: tempObj,
-      cityList: cityList
+      cityList: cityList,
+      activeId: cityId
     })
   },
   onReady: function () {
@@ -156,8 +159,36 @@ Page({
   bindCity: function (e) {
     var id = e.currentTarget.dataset.id;
     console.log(id);
-    wx.navigateTo({
-      url: '../traffic/list'
+    //改变颜色
+    this.setData({
+      activeId: id
+    })
+    var isJump = false;
+    var supportCity = ["13", "14"];
+    for (var i = 0; i < supportCity.length; i++) {
+      if (id == supportCity[i]) {
+        isJump = true;
+        break;
+      }
+    }
+    if (!isJump) {
+      wx.showToast({
+        title: '该城市暂不支持',
+        icon: 'success',
+        duration: 2000
+      })
+      return;
+    }
+    var name = e.currentTarget.dataset.name;
+    var city = { id: id, name: name };
+    //以键值对的形式存储 传进去的是个对象
+    wx.setStorage({
+      key: 'city',
+      data: city,
+      success: function (res) {
+        console.log("保存storage");
+        wx.navigateBack();
+      }
     })
   }
 })
