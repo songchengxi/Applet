@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="/images/me.jpg" background-size="cover"></image>
+    <text class="userinfo-nickname">汾阳生活助手</text>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">Copyright (c) 2017-2018汾阳生活助手 版权所有</text>
+  </view> -->
+</view>
+
+<view>
+  <view class="item_letter">更多</view>
+  <view bindtap="jump" data-id="1" class="jump_app">
+    <image class="appinfo-avatar" src="../../images/traffic.jpg" background-size="cover"></image>
+  </view>
+  <view bindtap="jump" data-id="2" class="jump_app">
+    <image class="appinfo-avatar" src="../../images/history.jpg" background-size="cover"></image>
+  </view>
+</view>
