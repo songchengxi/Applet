@@ -12,8 +12,10 @@
 <view class="item_city">{{city}}</view> -->
 
 <view class="item_letter">当前支持城市</view>
-<view data-id="14" data-name="山西省" bindtap="bindCity" class="scroll-view-item_H"><text class="{{activeId == 14?'section_sel_text':'section_text'}}">山西</text></view>
-<view data-id="13" data-name="河北省" bindtap="bindCity" class="scroll-view-item_H"><text class="{{activeId == 13?'section_sel_text':'section_text'}}">河北</text></view>
+
+<view wx:for="{{supportCityList}}" data-id="{{item.code}}" data-name="{{item.name}}" bindtap="bindCity" class="scroll-view-item_H">
+  <text class="{{activeId == item.code?'section_sel_text':'section_text'}}">{{item.name}}</text>
+</view>
 
 <scroll-view scroll-y="true" style="height:{{winHeight}}px" bindscroll="bindScroll" scroll-top="{{scrollTop}}">
     <view class="selection" wx:for="{{cityList}}" wx:key="{{item.initial}}">

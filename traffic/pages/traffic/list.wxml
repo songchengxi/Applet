@@ -49,7 +49,7 @@
       </view>  
     </view>  
     <view class="bottom">
-      <view wx:if="{{hasMore}}" style="display: flex;justify-content: center;">
+      <view wx:if="{{hasMore}}" style="padding: 1rem 10px;display: flex;justify-content: center;">
         <text>没有更多了</text>
       </view>
       <view wx:else style="display: flex;justify-content: center;">

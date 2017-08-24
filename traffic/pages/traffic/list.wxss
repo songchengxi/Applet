@@ -28,11 +28,6 @@
 .category {
   float: right;
 }
-.bottom {
-  font-size: 0.85rem;
-  color: #b2b2b2;
-  padding: 1rem 10px;
-}
 
 /* 客服 */
 .contact {
@@ -49,6 +44,9 @@
 }
 
 /*  加载更多   */
+.bottom {
+  color: #b2b2b2;
+}
 .weui-loading {
   margin: 0 5px;
   width: 20px;

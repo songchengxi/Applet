@@ -11,10 +11,11 @@ Page({
     isShowLetter: false,
     activeId: 0,
     scrollTop: 0,
-    city: ""
+    city: "",
+    supportCityList: []
   },
   onLoad: function (options) {
-    var cityId = options.activeId;
+    var activeId = options.activeId;
     // 生命周期函数--监听页面加载
     var searchLetter = city.searchLetter;
     var cityList = city.cityList();
@@ -38,41 +39,37 @@ Page({
       itemH: itemH,
       searchLetter: tempObj,
       cityList: cityList,
-      activeId: cityId
+      activeId: activeId
+    })
+
+    //查询支持城市
+    var that = this;
+    wx.request({
+      url: 'https://chengxi.duapp.com/wechat/traffic/getSupportCity.do',
+      data: {
+
+      },
+      method: "POST",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.statusCode == 200) {
+          that.setData({
+            supportCityList: res.data.city
+          });
+        } else {
+          wx.showToast({
+            title: '请求错误',
+            icon: 'success',
+            duration: 2000
+          })
+        }
+      }
     })
   },
-  onReady: function () {
-    // 生命周期函数--监听页面初次渲染完成
 
-  },
-  onShow: function () {
-    // 生命周期函数--监听页面显示
-
-  },
-  onHide: function () {
-    // 生命周期函数--监听页面隐藏
-
-  },
-  onUnload: function () {
-    // 生命周期函数--监听页面卸载
-
-  },
-  onPullDownRefresh: function () {
-    // 页面相关事件处理函数--监听用户下拉动作
-
-  },
-  onReachBottom: function () {
-    // 页面上拉触底事件的处理函数
-
-  },
-  onShareAppMessage: function () {
-    // 用户点击右上角分享
-    // return {
-    //   title: 'title', // 分享标题
-    //   desc: 'desc', // 分享描述
-    //   path: 'path' // 分享路径
-    // }
-  },
   searchStart: function (e) {
     var showLetter = e.currentTarget.dataset.letter;
     var pageY = e.touches[0].pageY;
@@ -164,9 +161,9 @@ Page({
       activeId: id
     })
     var isJump = false;
-    var supportCity = ["13", "14"];
+    var supportCity = this.data.supportCityList;
     for (var i = 0; i < supportCity.length; i++) {
-      if (id == supportCity[i]) {
+      if (id == supportCity[i].code) {
         isJump = true;
         break;
       }
