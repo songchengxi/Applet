@@ -67,10 +67,6 @@ Page({
     wx.navigateToMiniProgram({
       appId: 'wxc626f32b3fbd3e18',
       path: 'pages/history/list',
-      extraData: {
-        foo: 'bar'
-      },
-      envVersion: 'develop',
       success(res) {
         // 打开成功
       }

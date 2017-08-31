@@ -1,0 +1,40 @@
+<view class="search flex-wrp">
+  <view class="search-left flex-item">
+    <image src="../../images/search.png"></image>
+    <input value="{{searchValue}}" placeholder="高速名 如G20/青银" placeholder-class="search-placeholder" auto-focus="true" bindinput="searchActiveChangeinput" bindconfirm="onPullDownRefresh" bindfocus="focusSearch" confirm-type="search" />
+  </view>
+  <view class="search-right flex-item" bindtap="onPullDownRefresh">搜索</view>
+  <button wx:if="{{showClearBtn}}" catchtap="searchActiveChangeclear" style="z-index:999;background:none;position:absolute;right:16%;top:5px;">
+    <icon type="clear" size="19" color="#aaa"></icon>
+  </button>
+</view>
+
+<view class="container">  
+  <view scroll-y="true" bindscroll="scroll">
+    <view class="scroll-view-item" wx:for="{{content}}" wx:key="{{item.id}}" data-id="{{item.id}}" catchtap="bindItemTap">  
+      <view class="detail">  
+        <text class="item-name">{{item.info}}</text>  
+        <view class="tips">
+          <view wx:if="{{item.type == 1}}"><text class="item-info">事故</text></view>
+          <view wx:elif="{{item.type == 2}}"><text class="item-info">拥堵</text></view>
+          <view wx:elif="{{item.type == 3}}"><text class="item-info">管制、施工</text></view>
+          <view wx:elif="{{item.type == 4}}"><text class="item-info">封闭</text></view>
+          <view wx:elif="{{item.type == 5}}"><text class="item-info">缓慢</text></view>
+          <view wx:else><text class="item-info">{{item.type}}</text></view>
+          <text class="category">{{item.time}}</text>  
+        </view>  
+      </view>  
+    </view>  
+    <view class="bottom">
+      <view wx:if="{{hasMore}}" style="padding: 1rem 10px;display: flex;justify-content: center;">
+        <text>没有更多了</text>
+      </view>
+      <view wx:else style="display: flex;justify-content: center;">
+        <view class="weui-loadmore">
+          <view class="weui-loading"></view>
+          <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+      </view>
+    </view>
+  </view>  
+</view>

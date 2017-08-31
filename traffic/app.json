@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/traffic/list",
+    "pages/search/list",
     "pages/switchcity/list",
     "pages/aboutUs/list"
   ],

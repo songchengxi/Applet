@@ -13,11 +13,14 @@
 </view>  
 </modal> -->
 
-<view class="home_address" data-id="{{cityId}}" catchtap="selCity">
-  <view>  
-    <text>当前省市：{{cityName}}</text>  
-    <image src="{{imgUrls_address}}" />  
+<view class="home_address">
+  <view class='sel_city' data-id="{{cityId}}" catchtap="selCity">  
+    <text class='sel_text'>当前省市：{{cityName}}</text>  
+    <image class='sel_city_img' src="{{imgUrls_address}}" />  
   </view>  
+  <view class='search' catchtap="goSearch">
+    <image class='search_img' src="../../images/search.png"/>
+  </view>
 </view>
 
 <!-- <view class="section section_gap">

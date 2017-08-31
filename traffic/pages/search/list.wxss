@@ -1,6 +1,58 @@
+.flex-wrp {
+  display: flex;
+}
+
+.flex-item {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search {
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #4fc3f7;
+}
+
+.search-left {
+  width: 85%; 
+  background: #03a9f4;
+  text-align: left;
+  border-radius: 13rpx;
+}
+
+.search-left input {
+  width: 85%; 
+  display: inline-block;
+  font-size: 26rpx;
+}
+
+.search-placeholder {
+  color: #fff;
+  line-height: 30rpx;
+}
+
+.search-left image {
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+
+.search-right {
+  width: 15%; 
+  color: #fff; 
+  padding: 15rpx; 
+}
+
+button::after {
+  border: 0px solid rgba(0, 0, 0, 0.2);
+}
+
+/*列表信息*/
 .container {
   padding: 0;
 }
+
 .scroll-view-item {
   padding: 1rem 5px;
   padding-bottom: 3px;
@@ -8,39 +60,30 @@
   display: flex;
   border-bottom: 1px solid #e6e8eb;
 }
+
 .detail {
   line-height: 1.25em;
   flex: 2;
   padding: 0 10px;
   position: relative;
 }
+
 .item-name {
   top: 0;
 }
+
 .tips {
   font-size: 0.85rem;
   bottom: 0;
   color: #b2b2b2;
 }
+
 .item-info {
   float: left;
 }
+
 .category {
   float: right;
-}
-
-/* 客服 */
-.contact {
-  background-color: #b2b2b2;
-  border-radius: 30px;
-  height: 60px;
-  width: 60px;
-  opacity: 0.5;
-  text-align: center;
-  font-size: 0.7rem;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
 }
 
 /*  加载更多   */
@@ -68,94 +111,4 @@
 .weui-loadmore__tips {
   display: inline-block;
   vertical-align: middle;
-}
-
-/* 定位 */
-.home_address {
-  background-color: #4fc3f7;
-  padding: 15rpx;
-  padding-bottom: 10rpx;
-  height: 70rpx;
-}
-.home_address .sel_city {
-  padding-right: 30rpx;
-  padding-left: 30rpx;
-  padding-top: 10rpx;
-  padding-bottom: 10rpx;
-  white-space: nowrap;
-  float: left;
-  width:70%;
-}
-.sel_text {
-  color: white;
-  padding-right: 40rpx;
-  padding-top: 10rpx;
-  padding-bottom: 10rpx;
-  padding-left: 20rpx;
-  white-space: nowrap;
-  border-radius: 30rpx;
-  background-color: #03a9f4;
-}
-.sel_city_img {
-  width: 14rpx;
-  height: 9rpx;
-  padding: 8rpx;
-  margin-left: -40rpx;
-}
-
-/* 查找 */
-.search{
-  float: right;
-  height: 40rpx;
-  padding: 12rpx;
-}
-.search_img{
-  width: 40rpx;
-  height: 40rpx;
-}
-
-/* 隐藏滚动条 */
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  color: transparent;
-}
-
-/* 分类选择 */
-.scroll-view_H {
-  width: 100%;
-  white-space: nowrap;
-  border-bottom: 1px solid #e6e8eb;
-}
-.scroll-view-item_H {
-  text-align: center;
-  margin-top: 25rpx;
-  margin-bottom: 35rpx;
-  margin-left: 10rpx;
-  margin-right: 10rpx;
-  display: inline-block;
-}
-.section_sel_text {
-  color: white;
-  font-size: 0.75rem;
-  padding-right: 30rpx;
-  padding-top: 20rpx;
-  padding-bottom: 20rpx;
-  padding-left: 30rpx;
-  white-space: nowrap;
-  border-radius: 12rpx;
-  background-color: #03a9f4;
-  border: 0.5rpx solid 03a9f4;
-}
-.section_text {
-  color: black;
-  font-size: 0.75rem;
-  padding-right: 30rpx;
-  padding-top: 20rpx;
-  padding-bottom: 20rpx;
-  padding-left: 30rpx;
-  white-space: nowrap;
-  border-radius: 12rpx;
-  background-color: white;
-  border: 0.5rpx solid black;
 }

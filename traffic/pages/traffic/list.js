@@ -119,12 +119,21 @@ Page({
       url: '../switchcity/list?activeId='+id
     })
   },
+  goSearch:function(){
+    wx.navigateTo({
+      url: '../search/list'
+    })
+  },
   onReady: function () {
     // 生命周期函数--监听页面初次渲染完成
   },
   onShow: function () {
     // 生命周期函数--监听页面显示
     console.log("-------onShow---------");
+    this.setData({
+      page: 0,
+      hasMore: false
+    });
 
     var that = this;
     try {
