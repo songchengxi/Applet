@@ -12,6 +12,7 @@
     width:34%;
     justify-content: center;
     text-align: center;
+    white-space:pre-wrap;
 }
 .bg-w{
   background: snow;

@@ -1,6 +1,8 @@
 {
   "pages":[
-    "pages/history/list"
+    "pages/history/list",
+    "pages/detail/detail",
+    "pages/aboutUs/list"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -8,5 +10,23 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },
-  "debug": true
+  "tabBar": {
+    "color": "#b2b2b2",
+    "selectedColor": "#03a9f4",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/indexSel.png",
+        "iconPath": "images/index.png",
+        "pagePath": "pages/history/list",
+        "text": "历史朝代"
+      },
+      {
+        "selectedIconPath": "images/aboutSel.png",
+        "iconPath": "images/about.png",
+        "pagePath": "pages/aboutUs/list",
+        "text": "关于"
+      }
+    ]
+  }
 }
