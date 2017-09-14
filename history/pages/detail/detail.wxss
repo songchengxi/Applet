@@ -1,28 +1,46 @@
-.swiper-tab{  
-  width: 100%;  
-  border-bottom: 1rpx solid #777777;  
-  text-align: center;  
+.swiper-tab {
+  width: 100%;
+  border-bottom: 1rpx solid #777;
+  text-align: center;
   line-height: 60rpx;
-}  
-.swiper-tab-list{  
-  font-size: 30rpx;  
-  display: inline-block;  
-  width: 33.33%;  
-  color: #777777;  
-}  
-.on{ 
-  color: #da7c0c;  
-  border-bottom: 1rpx solid #da7c0c;
-}  
-
-.swiper-box{ 
-  display: block; 
-  height: 100%;   
-  width: 100%; 
-  overflow: hidden;   
 }
-.swiper-box view{  
-  white-space:pre-wrap; 
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 1rpx solid #da7c0c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  white-space: pre-wrap;
   padding-left: 20rpx;
   padding-right: 20rpx;
+}
+
+.profile {
+  padding: 1rem 5px;
+}
+
+.title {
+  font-weight:bold;
+  padding: 1rem 5px;
+  border-bottom: 1px solid #e6e8eb;
+}
+
+.content {
+  padding: 1rem 5px;
+  border-bottom: 1px solid #e6e8eb;
 }
